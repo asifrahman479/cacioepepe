@@ -95,6 +95,7 @@
           <PieChart
             :year="yearIndex"
             :chartData="majorChartData"
+            :options="majorChartData.options"
             id="majorChart"
           />
         </v-col>
@@ -102,6 +103,7 @@
           <PieChart
             :year="yearIndex"
             :chartData="genderChartData"
+            :options="genderChartData.options"
             id="genderChart"
           />
         </v-col>
@@ -196,6 +198,12 @@ export default {
         ]
       },
       majorChartData: {
+        options: {
+          title: {
+            display: true,
+            text: "Majors"
+          }
+        },
         labels: [
           "Computer Science",
           "Electrical Engineering",
@@ -230,6 +238,12 @@ export default {
         ]
       },
       genderChartData: {
+        options: {
+          title: {
+            display: true,
+            text: "Genders"
+          }
+        },
         labels: ["Male", "Female", "Other"],
         datasets: [
           {

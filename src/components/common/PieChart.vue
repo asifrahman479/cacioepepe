@@ -19,7 +19,7 @@ export default {
     chartData: {},
 
     options: {
-      // default:""
+      display: true
     },
     year: {
       default: "4"
